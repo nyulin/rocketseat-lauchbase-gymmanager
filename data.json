@@ -1,0 +1,18 @@
+{
+    "instructors": [
+        {
+            "avatar": "http://google.com",
+            "name": "a",
+            "birth": "2020-01-01",
+            "gender": "M",
+            "services": "a"
+        },
+        {
+            "avatar": "http://google.com",
+            "name": "123",
+            "birth": "1231-03-12",
+            "gender": "M",
+            "services": "a, b, baeda"
+        }
+    ]
+}

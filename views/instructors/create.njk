@@ -1,0 +1,67 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/instructors.css">
+{% endblock %}
+
+{% block content %}
+    <form class="card" method="POST" action="/instructors">
+        <section class="avatar"></section>
+        <section class="details">
+            <h3>New Instructor</h3>
+            <div class="item">
+                <div>Avatar URL</div>
+                <input 
+                    type="url"
+                    name="avatar"
+                    placeholder="http://"
+                />
+            </div>
+            <div class="item">
+                <div>Name</div>
+                <input 
+                    type="text"
+                    name="name" 
+                />
+            </div>
+            <div class="item">
+                <div>Date of Birth</div>
+                <input 
+                    type="date"
+                    name="birth" 
+                />
+            </div>
+            <div class="item">
+                <div>Gender</div>
+                <span>
+                    <input 
+                        type="radio"
+                        name="gender"
+                        value="M"
+                        checked
+                    />
+                    Male
+                </span>
+                <span>
+                    <input 
+                        type="radio"
+                        name="gender"
+                        value="F"
+                    />
+                    Female
+                </span>
+            </div>
+            <div class="item">
+                <div>Attendance</div>
+                <div>
+                    <input 
+                        type="text" 
+                        name="services"
+                        placeholder="Separate services with a comma"
+                    />
+                </div>
+            </div>
+            <button type="submit">Save</button>
+        </section>
+    </form>
+{% endblock %}
