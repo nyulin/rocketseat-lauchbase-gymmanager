@@ -1,8 +1,12 @@
-const modalOverlay = document.querySelector(".modal_overlay");
-const cards = document.querySelectorAll(".card");
+console.log("aloha");
 
-for (let card of cards){
-    card.addEventListener("click", function(){
-        window.location.href = `http://localhost:5000/video?id=${card.id}`;
-    });
-}
+// const currentPage = location.pathname;
+// const menuItems = document.querySelectorAll("header .links a");
+// console.log(menuItems);
+// for(item of menuItems){
+//     if(currentPage.includes(item.getAttribute("href"))){
+//         console.log(currentPage.includes(item.getAttribute("href")));
+//         item.classList.add("active");
+//     }
+// }
+

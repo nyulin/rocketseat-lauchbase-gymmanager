@@ -1,18 +1,33 @@
 {
-    "instructors": [
-        {
-            "avatar": "http://google.com",
-            "name": "a",
-            "birth": "2020-01-01",
-            "gender": "M",
-            "services": "a"
-        },
-        {
-            "avatar": "http://google.com",
-            "name": "123",
-            "birth": "1231-03-12",
-            "gender": "M",
-            "services": "a, b, baeda"
-        }
-    ]
+  "instructors": [
+    {
+      "id": 1,
+      "avatar": "https://post.healthline.com/wp-content/uploads/2020/09/4489-gym_people_exercise-1296x728-header-1200x628.jpg",
+      "name": "Elizette",
+      "birth": 954547200000,
+      "gender": "F",
+      "services": "dor, ódio, sofrimento",
+      "created_at": 1613305686318
+    },
+    {
+      "id": 2,
+      "avatar": "https://image.freepik.com/fotos-gratis/mao-da-mulher-que-guarda-o-exercicio-do-peso-no-gym-exercicio-de-musculacao-muscular_53476-2602.jpg",
+      "name": "Elizette",
+      "birth": 946684800000,
+      "gender": "F",
+      "services": "teste, teste,teste",
+      "created_at": 1613305729666
+    },
+    {
+      "id": 3,
+      "avatar": "https://image.cnbcfm.com/api/v1/image/105999935-1562097549646sport-stretching-leisure-hobby-woman-strong-exercise-workout-gym-weightlifting_t20_v7r7a7.jpg",
+      "name": "Fabi",
+      "birth": null,
+      "gender": "F",
+      "services": "teatro, artesanato, viagem",
+      "created_at": 1613306848862
+    }
+  ],
+  
+  "members": []
 }
