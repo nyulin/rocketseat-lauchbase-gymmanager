@@ -163,7 +163,8 @@ tbody tr td:last-child{
     text-align: center;
 }
 
-tbody tr td:last-child a{
+tbody tr td:last-child a,
+.table-container > a{
     text-decoration: none;
     background-color: var(--primary-color);
     color: white;
@@ -174,3 +175,7 @@ tbody tr td:last-child a{
     box-sizing: border-box;
 }
 
+.table-container > a{
+    margin-bottom: 16px;
+    display: inline-block;
+}

@@ -4,7 +4,7 @@
         type="url"
         name="avatar"
         placeholder="http://"
-        value="{{instructor.avatar}}"
+        value="{{member.avatar}}"
     />
 </div>
 <div class="item">
@@ -12,7 +12,15 @@
     <input 
         type="text"
         name="name" 
-        value="{{instructor.name}}"
+        value="{{member.name}}"
+    />
+</div>
+<div class="item">
+    <div>E-mail</div>
+    <input 
+        type="email"
+        name="email" 
+        value="{{member.email}}"
     />
 </div>
 <div class="item">
@@ -20,7 +28,7 @@
     <input 
         type="date"
         name="birth" 
-        value="{{instructor.birth}}"
+        value="{{member.birth}}"
     />
 </div>
 <div class="item">
@@ -30,7 +38,7 @@
             type="radio"
             name="gender"
             value="M"
-            {% if instructor.gender == "M" %}}
+            {% if member.gender == "M" %}}
                 checked
             {% endif %}}
         />
@@ -41,7 +49,7 @@
             type="radio"
             name="gender"
             value="F"
-            {% if instructor.gender == "F" %}}
+            {% if member.gender == "F" %}}
                 checked
             {% endif %}}
         />
@@ -49,14 +57,32 @@
     </span>
 </div>
 <div class="item">
-    <div>Attendance</div>
-    <div>
-        <input 
-            type="text" 
-            name="services"
-            placeholder="Separate services with a comma"
-            value="{{instructor.services}}"
-        />
-    </div>
+    <div>Blood Type</div>
+    <select name="blood">
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B-</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+">O+</option>
+        <option value="O-">O-</option>
+    </select>
+</div>
+<div class="item">
+    <div>Weight</div>
+    <input 
+        type="number"
+        name="weight" 
+        value="{{member.weight}}"
+    />
+</div>
+<div class="item">
+    <div>Height</div>
+    <input 
+        type="number"
+        name="height" 
+        value="{{member.height}}"
+    />
 </div>
 <button type="submit">Save</button>
