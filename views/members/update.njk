@@ -1,27 +1,31 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/instructors.css">
+    <link rel="stylesheet" href="/styles.css">
 {% endblock %}
 
 {% block content %}
     <div class="card">
         <section 
-            style="background: url({{instructor.avatar}}) no-repeat center"
+            style="background: url({{member.avatar}}) no-repeat center center / cover"
         >
         </section>
         <section class="details">
-            <form method="POST" action="/instructors?_method=PUT">
-                <h3>Edit Instructor</h3>
+            <form method="POST" action="/members?_method=PUT">
+                <h3>Edit Member</h3>
 
-                {% include 'instructors/fields.njk' %}
+                {% include 'members/fields.njk' %}
 
-                <input type="hidden" name="id" value="{{instructor.id}}" />           
+                <input type="hidden" name="id" value="{{member.id}}" />           
             </form>
-            <form id="form-delete" method="POST" action="/instructors?_method=DELETE">
-                <input type="hidden" name="id" value="{{instructor.id}}" /> 
+            <form id="form-delete" method="POST" action="/members?_method=DELETE">
+                <input type="hidden" name="id" value="{{member.id}}" /> 
                 <button type="submit">Delete</button>
             </form>
         </section>
-    </div>
+    </div> 
+{% endblock %}
+
+{% block footer %}
+    <script src="/delete.js"></script>
 {% endblock %}

@@ -77,7 +77,7 @@ exports.update = function(request, response){
 
     const instructor = {
         ...foundInstructor,
-        birth: date(foundInstructor.birth)
+        birth: date(foundInstructor.birth).iso
     };
     return response.render("instructors/update", { instructor});
 }

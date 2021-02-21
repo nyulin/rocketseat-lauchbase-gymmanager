@@ -1,7 +1,7 @@
 /* File System */
 const fs = require('fs');
 const data = require('../data.json');
-const { age, date } = require('../utils');
+const { date } = require('../utils');
 
 /* List */
 exports.list = function(request, response){
@@ -20,7 +20,7 @@ exports.show = function(request, response){
 
     const member = {
         ...foundMember,
-        age: age(foundMember.birth),
+        birthday: date(foundMember.birth).birthday,
         created_at: new Intl.DateTimeFormat('pt-BR').format(foundMember.created_at)
     };
 
@@ -41,14 +41,12 @@ exports.post = function(request, response){
             return response.send("400 - All fields are required");
         }
     }
-
-    let {avatar, name, birth, gender} = request.body;
     
-    birth = Date.parse(birth);
+    birth = Date.parse(request.body.birth);
     const created_at = Date.now();
-    const id = Number(data.members.length + 1);
+    const id = (!data.members[data.members.length - 1]) ? 1 : data.members[data.members.length - 1].id + 1;
 
-    data.members.push({id, avatar, name, birth, gender, created_at});
+    data.members.push({id, ...request.body, birth});
 
     fs.writeFile("data.json", JSON.stringify(data, null, 4), function(err){
         if (err) {
@@ -72,7 +70,7 @@ exports.update = function(request, response){
 
     const member = {
         ...foundMember,
-        birth: date(foundMember.birth)
+        birth: date(foundMember.birth).iso
     };
     return response.render("members/update", { member});
 }

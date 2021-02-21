@@ -1,7 +1,7 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/instructors.css">
+    <link rel="stylesheet" href="/styles.css">
 {% endblock %}
 
 {% block content %}
@@ -10,21 +10,25 @@
         <table width="100%">
             <thead>
                 <tr>
-                    <th>Instructor</th>
-                    <th>Services</th>
+                    <th>Member</th>
+                    <th>E-mail</th>
+                    <th>Weight</th>
+                    <th>Height</th>
                     <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                {% for instructor in instructors %}
+                {% for member in members %}
                     <tr>
                         <td>
-                            <span style="background-image: url({{instructor.avatar}})"></span>
-                            {{instructor.name}}
+                            <span style="background-image: url({{member.avatar}})"></span>
+                            {{member.name}}
                         </td>
-                        <td>{{instructor.services}}</td>
+                        <td>{{member.email}}</td>
+                        <td>{{member.weight}}kg</td>
+                        <td>{{member.height}}cm</td>
                         <td>
-                            <a href="/instructors/{{instructor.id}}">
+                            <a href="/members/{{member.id}}">
                                 Show
                             </a>
                         </td>

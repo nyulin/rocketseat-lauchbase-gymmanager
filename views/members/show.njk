@@ -1,43 +1,51 @@
 {% extends "layout.njk" %}
 
 {% block head %}
-    <link rel="stylesheet" href="/instructors.css">
+    <link rel="stylesheet" href="/styles.css">
 {% endblock %}
 
 {% block content %}
     <div class="card">
         <section 
-            style="background: url({{instructor.avatar}}) no-repeat center"
+            style="background: url({{member.avatar}}) no-repeat center center / cover"
         >
         </section>
         <section class="details">
             <h3>Details</h3>
             <div class="item">
-                <div>Istructor</div>
-                <div>{{instructor.name}}</div>
+                <div>Member</div>
+                <div>{{member.name}}</div>
             </div>
             <div class="item">
-                <div>Age</div>
-                <div>{{instructor.age}}</div>
+                <div>E-mail</div>
+                <div>{{member.email}}</div>
+            </div>
+            <div class="item">
+                <div>Birthday</div>
+                <div>{{member.birthday}}</div>
             </div>
             <div class="item">
                 <div>Gender</div>
-                <div>{{"MALE" if instructor.gender == "M" else "FEMALE"}}</div>
-            </div>
-            <div class="item">
-                <div>Attendance</div>
-                <div>
-                    {% for service in instructor.services %}
-                        <span>{{service}}</span>
-                    {% endfor %}
-                </div>
+                <div>{{"MALE" if member.gender == "M" else "FEMALE"}}</div>
             </div>
             <div class="item">
                 <div>Since</div>
-                <div>{{instructor.created_at}}</div>
+                <div>{{member.created_at}}</div>
+            </div>
+            <div class="item">
+                <div>Blood Type</div>
+                <div>{{member.blood}}</div>
+            </div>
+            <div class="item">
+                <div>Weight (kg)</div>
+                <div>{{member.weight}}</div>
+            </div>
+            <div class="item">
+                <div>Height (cm)</div>
+                <div>{{member.height}}</div>
             </div>
             <a 
-                href="/instructors/{{instructor.id}}/update"
+                href="/members/{{member.id}}/update"
                 class="button"
             >
                 Editar

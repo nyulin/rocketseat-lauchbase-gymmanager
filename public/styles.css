@@ -77,7 +77,7 @@
     font-size: 12px;
 }
 
-form input{
+form input, select{
     width: 100%;
     outline: none;
     color: #555;
@@ -136,6 +136,7 @@ th{
 td, th {
     padding: 16px;
     border-bottom: 1px solid #D9D9D9;
+    vertical-align: middle;
 }
 
 tbody tr:last-child td {
@@ -156,11 +157,6 @@ tbody tr td:first-child span {
     border-radius: 50%;
     box-shadow: 3px 1px 6px -4px black;
     border: 2px solid white;
-}
-
-tbody tr td:last-child{
-    vertical-align: auto;
-    text-align: center;
 }
 
 tbody tr td:last-child a,

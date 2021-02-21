@@ -28,6 +28,28 @@
       "created_at": 1613306848862
     }
   ],
-  
-  "members": []
+  "members": [
+    {
+      "id": 2,
+      "avatar": "https://post.healthline.com/wp-content/uploads/2020/09/4489-gym_people_exercise-1296x728-header-1200x628.jpg",
+      "name": "Teste",
+      "email": "adm@lw.com",
+      "birth": 954547200000,
+      "gender": "F",
+      "blood": "O-",
+      "weight": "80",
+      "height": "190"
+    },
+    {
+      "id": 3,
+      "avatar": "https://post.healthline.com/wp-content/uploads/2020/09/4489-gym_people_exercise-1296x728-header-1200x628.jpg",
+      "name": "aasdaa",
+      "email": "nyu@teste.com",
+      "birth": 1270080000000,
+      "gender": "M",
+      "blood": "AB-",
+      "weight": "90",
+      "height": "180"
+    }
+  ]
 }
